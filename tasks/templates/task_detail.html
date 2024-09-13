@@ -22,7 +22,7 @@
     
     <ul>
         <li><strong>Descrição:</strong> {{ task.description }}</li>
-        <li><strong>Prioridade:</strong> {{ task.get_priority_display }}</li>
+        <li><strong>Prioridade:</strong> {{ task.priority }}</li>
         <li><strong>Status:</strong> {{ task.status }}</li>
         <li><strong>Data de Criação:</strong> {{ task.created_at|date:"d/m/Y H:i" }}</li>
     </ul>

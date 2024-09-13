@@ -23,7 +23,7 @@
         {% for task in tasks %}
             <li>
                 {{ task.title }} - {{ task.get_priority_display }} - 
-                <a href="{% url 'task-update' task.pk %}">Editar</a> | 
+                <a href="{% url 'task-detail' task.pk %}">Detalhes</a> 
                 <a href="{% url 'task-delete' task.pk %}">Excluir</a>
             </li>
         {% empty %}

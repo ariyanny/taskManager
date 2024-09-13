@@ -75,10 +75,6 @@ def register(request):
 
 
 
-def TaskDetailView(DetailView):
-    model = Task
-    template_name = 'task_detail.html'
-    context_object_name = 'task'
-
-    def get_queryset(self):
-        return Task.objects.filter(user=self.request.user)
+def TaskDetailView(request, pk):
+    task = get_object_or_404(Task, pk=pk, user=request.user)
+    return render(request, 'task_detail.html', {'task': task})
